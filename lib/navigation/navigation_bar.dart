@@ -46,11 +46,11 @@ class _ScaffoldWithNavigationState extends State<ScaffoldWithNavigation> {
               listener: (context, state) {
                 final index = NavigationTab.values.indexOf(state.currentTab);
                 print(state.currentTab);
-                // _pageController.animateToPage(
-                //   index,
-                //   duration: const Duration(milliseconds: 100),
-                //   curve: Curves.easeInOut,
-                // );
+                _pageController.animateToPage(
+                  index,
+                  duration: const Duration(milliseconds: 100),
+                  curve: Curves.easeInOut,
+                );
                 widget.navigationShell.goBranch(index);
               },
               child: PageView(
