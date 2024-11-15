@@ -46,6 +46,8 @@ class _ScaffoldWithNavigationState extends State<ScaffoldWithNavigation> {
               listener: (context, state) {
                 final index = NavigationTab.values.indexOf(state.currentTab);
                 print(state.currentTab);
+                // TODO: fix this animation. It doesn't look good.
+                // reffer whatsapp app to take a look of what we want.
                 _pageController.animateToPage(
                   index,
                   duration: const Duration(milliseconds: 100),
